@@ -1,0 +1,10 @@
+class {{ class_name }}(ColumnPipelineOperation):
+    """{{ docstring }}"""
+
+    {% if attrs %}def __init__(self, {% for attr in attrs %}{{ attr.render_as_init_param() }}{% if not loop.last %}, {% endif %}{% endfor %}):
+        {% for attr in attrs %}{{ attr.render_as_init_assign() }}
+        {% endfor %}
+    {% endif %}def execute(self, {{ execol }}) -> Column:
+        return F.{{ fn_name }}({{ exec_args }})
+
+

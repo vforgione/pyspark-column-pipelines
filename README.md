@@ -38,9 +38,12 @@ inline "natively" on a dataframe:
 df = df.withColumnPipeline("some_col", Op1(), Op2(), Op3(), ...)
 ```
 
-## Disclosures
+## License and Disclosures
 
 This was created to scratch an itch. It works for what I intend it to do, and I'm not
 absolutely sure I want to fully support this. I will not contribute this software as it
 currently exists to PyPI, but if you want to source it directly from this repository
 and use it go ahead.
+
+It is licensed as WTFPL, so you don't need to credit this work in anything you use it
+for.
